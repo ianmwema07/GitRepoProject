@@ -4,12 +4,14 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { UsersComponent } from './users/users.component'
+import { UsersComponent } from './users/users.component';
+import { ReposComponent } from './repos/repos.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    ReposComponent
   ],
   imports: [
     BrowserModule,
