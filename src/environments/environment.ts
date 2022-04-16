@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // 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
-  G_API : 'https://api.github.com/users/ + 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'
+  GIT_API : 'https://api.github.com/users/ + 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'
 };
 
 /*
