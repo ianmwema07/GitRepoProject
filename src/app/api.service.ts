@@ -7,10 +7,14 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ApiService {
-  user: User;
+
 
   constructor(private http:HttpClient) {
-    this.user = new User();
+
+   }
+
+   getUsername(username:string){
+
    }
 
   getRepo( username: string  ):any{
