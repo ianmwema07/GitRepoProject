@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormControl, Validators,} from '@angular/forms';
 import { ApiService } from '../api.service';
 
 
@@ -10,18 +10,30 @@ import { ApiService } from '../api.service';
   providers: [ApiService]
 })
 export class UsersComponent implements OnInit {
+
+
+  name = new FormControl('' , Validators.required)
   users:any
   constructor(private apiService:ApiService) { }
 
   ngOnInit(): void {
-    this.getPublicUsersWithPromise()
+
   }
 
 
-  getPublicUsersWithPromise(){
-    const users = this.apiService.getUsers('ianmwema07').then((users:any)=>{
+  getPublicUsersWithPromise(username: any){
+    const users = this.apiService.getUsers(username).then((users:any)=>{
       this.users = users
       console.log(users);
     })
+  }
+
+  searchUser(){
+    if(!this.name.valid){
+      alert("Username is required");
+    }
+    let username = this.name.value;
+    this.getPublicUsersWithPromise(username);
+    return false;
   }
 }

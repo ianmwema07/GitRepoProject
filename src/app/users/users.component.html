@@ -1,8 +1,8 @@
 <div class="container">
-  <form>
+  <form (submit)="searchUser()">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Search User Name to view Details</label>
-      <input type="text" class="form-control" id="userName" aria-describedby="emailHelp" name="userName">
+      <input [formControl]="name" type="text" class="form-control" id="userName" aria-describedby="emailHelp" name="userName">
     </div>
     <div>
       <button type="submit" class="btn btn-primary">Search</button>
