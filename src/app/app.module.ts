@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsersComponent } from './users/users.component';
 import { ReposComponent } from './repos/repos.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { DayCountPipe } from './day-count.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     AppComponent,
     UsersComponent,
     ReposComponent,
-    NavbarComponent
+    NavbarComponent,
+    DayCountPipe
   ],
   imports: [
     BrowserModule,
