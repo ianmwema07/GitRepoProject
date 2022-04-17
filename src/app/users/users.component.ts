@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from '../api.service';
 
 
@@ -9,7 +10,7 @@ import { ApiService } from '../api.service';
   providers: [ApiService]
 })
 export class UsersComponent implements OnInit {
-  users = []
+  users:any
   constructor(private apiService:ApiService) { }
 
   ngOnInit(): void {
