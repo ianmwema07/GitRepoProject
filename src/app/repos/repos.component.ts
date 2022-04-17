@@ -18,8 +18,8 @@ export class ReposComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getPublicReposWithPromise(repos: any){
-     this.apiService.getUsers(repos).then((repos:any)=>{
+  getPublicReposWithPromise(repository: any){
+     this.apiService.getRepos(repository).then((repos:any)=>{
       this.repos = repos
       console.log(repos);
     })
@@ -29,8 +29,8 @@ export class ReposComponent implements OnInit {
     if(!this.repo.valid){
       alert("Repository name is required");
     }
-    let repos = this.repo.value;
-    this.getPublicReposWithPromise(repos);
+    let repository = this.repo.value;
+    this.getPublicReposWithPromise(repository);
     return false;
   }
 

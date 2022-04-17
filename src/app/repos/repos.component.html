@@ -2,11 +2,18 @@
   <form (submit)="searchRepo()">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Search User Name to view repositories</label>
-      <input type="text" class="form-control" id="repo" aria-describedby="emailHelp" name="repo">
+      <input [formControl]="repo" type="text" class="form-control" id="repo" aria-describedby="emailHelp" name="repo">
     </div>
     <div>
       <button type="submit" class="btn btn-primary">Search</button>
     </div>
   </form>
+</div>
+<div>
+  <ul *ngFor="let repo of repos" >
+    <li> <a href="{{ repo.html_url }}">{{ repo.full_name }}</a>
+    </li>
+
+  </ul>
 </div>
 

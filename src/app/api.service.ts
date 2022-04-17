@@ -13,7 +13,7 @@ export class ApiService {
 
    }
 
-  
+
 
   getUsers( username: string  ):any{
     const promise = new Promise((resolve,reject)=>{
@@ -21,6 +21,7 @@ export class ApiService {
     })
     return promise
   }
+
   getRepos( repository: string  ):any{
     const promise = new Promise((resolve,reject)=>{
       resolve(this.http.get(`https://api.github.com/users/${repository}/repos`).toPromise())
