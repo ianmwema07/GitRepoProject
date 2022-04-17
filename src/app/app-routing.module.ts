@@ -6,7 +6,7 @@ import { ReposComponent } from './repos/repos.component';
 
 
 const routes: Routes = [
-  { path:'users', component:UsersComponent }
+  { path:'users', component:UsersComponent },
   { path:'repos', component:ReposComponent }
 ];
 
