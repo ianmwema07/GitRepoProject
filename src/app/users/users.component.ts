@@ -22,7 +22,7 @@ export class UsersComponent implements OnInit {
 
 
   getPublicUsersWithPromise(username: any){
-    const users = this.apiService.getUsers(username).then((users:any)=>{
+    this.apiService.getUsers(username).then((users:any)=>{
       this.users = users
       console.log(users);
     })
