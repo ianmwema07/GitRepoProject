@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
 
 @Component({
@@ -8,6 +9,7 @@ import { ApiService } from '../api.service';
 })
 export class ReposComponent implements OnInit {
 
+  repo = new FormControl("",Validators.required)
   repos:any = []
 
 
@@ -16,11 +18,20 @@ export class ReposComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getPublicUsersWithPromise(repos: any){
+  getPublicReposWithPromise(repos: any){
      this.apiService.getUsers(repos).then((repos:any)=>{
       this.repos = repos
       console.log(repos);
     })
+  }
+
+  searchRepo(){
+    if(!this.repo.valid){
+      alert("Repository name is required");
+    }
+    let repos = this.repo.value;
+    this.getPublicReposWithPromise(repos);
+    return false;
   }
 
 
