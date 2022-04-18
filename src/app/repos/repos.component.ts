@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ApiService } from '../api.service';
+import { HighlightDirective } from '../highlight.directive';
+import { DayCountPipe } from '../day-count.pipe';
 
 @Component({
   selector: 'app-repos',
@@ -22,6 +24,7 @@ export class ReposComponent implements OnInit {
      this.apiService.getRepos(repository).then((repos:any)=>{
       this.repos = repos
       console.log(repos);
+
     })
   }
 

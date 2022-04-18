@@ -9,6 +9,8 @@ import { ReposComponent } from './repos/repos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DayCountPipe } from './day-count.pipe';
 import { LottieModule } from 'ngx-lottie';
+import { HighlightDirective } from './highlight.directive';
+import { HomeComponent } from './home/home.component';
 
 export function playerFactory() {
   return import('lottie-web');
@@ -20,7 +22,9 @@ export function playerFactory() {
     UsersComponent,
     ReposComponent,
     NavbarComponent,
-    DayCountPipe
+    DayCountPipe,
+    HighlightDirective,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

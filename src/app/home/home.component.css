@@ -1,0 +1,20 @@
+.repo-link{
+  text-align: center;
+}
+
+.repo-image img{
+  border-radius: 100%;
+  margin-top: 3em;
+  margin-bottom: 2em;
+  margin-right: 4em;
+}
+
+.repo-link p{
+  background-color: rgba(103, 89, 94, 1);
+  color: white;
+  padding: 1em;
+}
+
+.repo-link a{
+  text-decoration: none;
+}
