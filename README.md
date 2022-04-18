@@ -1,5 +1,9 @@
 # GitRepoProject
-
+#### This is a Git Repositories Project
+#### By **Ian Kariuki**
+## Description
+  This is an angular application that enables a user to search for a repository or a username and get a response that match his search through the form 
+## Setup/Installation Requirements
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
 ## Development server
@@ -25,3 +29,17 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Technologies Used
+* HTML.
+* CSS.
+* BOOTSTRAP.
+* JAVASCRIPT
+* JQUERY
+* Angular
+* GIT/GITHUB.
+## Support and contact details
+* project link [Git Repo Project](https://ianmwema07.github.io/GitRepoProject/repos)
+* IAN KARIUKI ian.kariuki@student.moringa.com
+### License
+**The MIT License (MIT)**
+Copyright (c) 2022 **Ian Kariuki**
