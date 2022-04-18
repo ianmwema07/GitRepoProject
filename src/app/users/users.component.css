@@ -10,6 +10,10 @@ rgba(103, 89, 94, 1)
   margin-top: 1em;
   margin-bottom: 1em;
 }
+
+.row{
+  margin-top: 1em;
+}
 .user-info p{
   display: flex;
   justify-content: center;
@@ -35,4 +39,11 @@ rgba(103, 89, 94, 1)
 .user-name h2 a{
   text-decoration: none;
 
+}
+
+.repos-button{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1em;
 }

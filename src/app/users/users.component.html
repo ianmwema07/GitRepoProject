@@ -16,6 +16,9 @@
         <h2><a href="{{users.html_url}}?tab=repositories" target="_blank">{{ users.name }}</a></h2>
        </div>
       <img src="{{users.avatar_url}}" alt="">
+      <div class="repos-button">
+        <a class="btn btn-outline-secondary" href="{{users.html_url}}?tab=repositories">View Repositories : &nbsp; &nbsp;{{ users.public_repos }}</a>
+      </div>
     </div>
     <div class="user-info col-md-6">
         <!-- <ul>
