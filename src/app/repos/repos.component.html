@@ -1,20 +1,29 @@
 <div class="container">
+  <h1>Github Repo Search</h1>
   <form (submit)="searchRepo()">
     <div class="mb-3">
       <label for="exampleInputEmail1" class="form-label">Search User Name to view repositories</label>
       <input [formControl]="repo" type="text" class="form-control" id="repo" aria-describedby="emailHelp" name="repo">
     </div>
     <div>
-      <button type="submit" class="btn btn-primary">Search</button>
+      <button type="submit" class="btn btn-outline-primary mb-4">Search Repos</button>
     </div>
   </form>
 </div>
 <div>
-  <ul *ngFor="let repo of repos" >
-    <li> <a href="{{ repo.html_url }}" target="_blank">{{ repo.full_name }}</a><br>
-      <p>created {{ repo.created_at|dayCount }} days ago</p>
+  <ul class="repo-list" *ngFor="let repo of repos" >
+    <li>
+      <div class="row">
+        <div col-md-6>
+          <h2>{{ repo.full_name }}</h2><br>
+          <p>created {{ repo.created_at|dayCount }} days ago</p>
+        </div>
+        <div col-md-6>
+          <a class="btn btn-outline-secondary" href="{{ repo.html_url }}" target="_blank"> <strong>Click here to view</strong> &nbsp; {{ repo.full_name }}</a><br>
+        </div>
+      </div>
     </li>
-
+    <hr>
   </ul>
 </div>
 

@@ -8,7 +8,11 @@ import { UsersComponent } from './users/users.component';
 import { ReposComponent } from './repos/repos.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DayCountPipe } from './day-count.pipe';
+import { LottieModule } from 'ngx-lottie';
 
+export function playerFactory() {
+  return import('lottie-web');
+}
 
 @NgModule({
   declarations: [
@@ -23,7 +27,8 @@ import { DayCountPipe } from './day-count.pipe';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LottieModule.forRoot({ player: playerFactory})
   ],
   providers: [],
   bootstrap: [AppComponent]

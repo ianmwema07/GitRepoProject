@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators,} from '@angular/forms';
+import { AnimationOptions } from 'ngx-lottie';
 import { ApiService } from '../api.service';
 
 
@@ -11,6 +12,9 @@ import { ApiService } from '../api.service';
 })
 export class UsersComponent implements OnInit {
 
+  options: AnimationOptions = {
+    path: 'add animation json file link', // download the JSON version of animation in your project directory and add the path to it like ./assets/animations/example.json
+  };
 
   name = new FormControl('' , Validators.required)
   users:any
